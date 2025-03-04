@@ -1,13 +1,73 @@
+:root {
+  --red: #a31d1d;
+  --dark-red1: #6d2323;
+  --dark-red2: #7c444f;
+  --light-red2: #9f5255;
+  --ofWhite: #e5d0ac;
+  --lightColor: #fef9e1;
+}
+/* common clases */
+.pointer {
+  cursor: pointer;
+}
+.line {
+    width: 75%;
+    height: 2px;
+    background-color: var(--dark-red1);
+    margin:10px auto;
+
+}
+/* common clases */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Segoe UI light';
+ 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* home page */
+
+.logo-girl , 
+.logo-boy{
+    overflow: hidden;
+    transition: transform 1s ease-in-out;
+    -webkit-transition: transform 1s ease-in-out;
+    -moz-transition: transform 1s ease-in-out;
+    -ms-transition: transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
+}
+.logo-home .logo-girl img,
+.logo-home .logo-boy img{
+  transition: transform 1s ease-in-out;
+  -webkit-transition: transform 1s ease-in-out;
+  -moz-transition: transform 1s ease-in-out;
+  -ms-transition: transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+}
+.logo-girl:hover  img,
+.logo-boy:hover img{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+/* home page */
+/* navbar style */
+nav{
+  background-color: #343131;
+  color: #FAF7F0;
+}
+.totalQuantity{
+ 
+  
+
+  text-align:center;
+  font-size: 22px;
+  line-height: 1;
+  color:white;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
 }
