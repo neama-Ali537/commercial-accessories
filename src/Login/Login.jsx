@@ -102,13 +102,11 @@ export default function Login({saveUserData}) {
         ""
       )}
 
-      <form onSubmit={submiteloginForm} className="container m-auto mt-5">
+      <form onSubmit={submiteloginForm} className="container m-auto mt-5 mb-6">
         <div className="row">
+          
           <div className="col-md-6 col-sm-6">
-            <img className=" w-100" src="/imgs/phone.png" alt="" />
-          </div>
-          <div className="col-md-6 col-sm-6">
-            <h2>Create an account</h2>
+            <h2>Log in to your account</h2>
             <p>Enter your details below</p>
 
             <div className="mb-3">
