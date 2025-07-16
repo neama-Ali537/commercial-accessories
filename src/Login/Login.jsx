@@ -24,7 +24,7 @@ export default function Login({saveUserData}) {
         "string.empty": "Email is required.",
       }),
     password: Joi.string()
-      .pattern(/^[A-Za-z]\d{6,}$/)
+      .pattern(/^[a-z]\d{6,}$/)
       .required()
       .messages({
         "string.pattern.base":

@@ -34,10 +34,10 @@ export default function Register() {
         "string.empty": "Email is required.",
       }),
     password: Joi.string()
-      .pattern(/^[A-Za-z]\d{6,}$/)
+      .pattern(/^[a-z]\d{6,}$/)
       .required()
       .messages({
-        "string.pattern.base": "Password must start with a letter and include at least 6 digits.",
+        "string.pattern.base": "Password must start with a letter then include at least 6 numbers.",
         "string.empty": "Password is required.",
       }),
     rePassword: Joi.string()
@@ -124,12 +124,12 @@ export default function Register() {
         ""
       )}
 
-      <form onSubmit={submiteRegisterForm} className="container m-auto">
+      <form onSubmit={submiteRegisterForm} className="container p-2 mt-2 mb-5">
         <div className="row">
           <div className="col-md-6 col-sm-6">
             <img className=" w-100" src="/imgs/phone.png" alt="" />
           </div>
-          <div className="col-md-6 col-sm-6">
+          <div className="col-md-6 col-sm-6 ">
             <h2>Create an account</h2>
             <p>Enter your details below</p>
 

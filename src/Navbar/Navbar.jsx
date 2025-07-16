@@ -47,18 +47,11 @@ export default function Navbar({ userData, logout }) {
                       User Profile
                     </Link>
                   </li>
-                  <li className="nav-item dropdown">
-                    <Link
-                      className="text-light text-decoration-none me-3 fw-bold"
-                      to={"about"}
-                    >
-                      About
-                    </Link>
-                  </li>
+                 
                   <li onClick={logout} className="nav-item">
-                    <span className=" text-light text-decoration-none me-3 fw-bold ">
-                      Log_Out
-                    </span>
+                    <Link className=" text-light text-decoration-none me-3 fw-bold ">
+                      Logout
+                    </Link>
                   </li>
                 </>
               ) : (

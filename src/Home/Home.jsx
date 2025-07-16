@@ -120,7 +120,7 @@ export default function Home({id , price , name , image}) {
                 <>
                   <div
                     key={category.id}
-                    className="card col-md-4 col-sm-12 p-2 m-auto"
+                    className="card col-md-4 col-sm-12 p-2 m-auto mb-5"
                     style={{
                       width: "18rem",
                     }}

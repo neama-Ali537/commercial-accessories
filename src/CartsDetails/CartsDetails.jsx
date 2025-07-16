@@ -63,7 +63,7 @@ export default function CartsDetails() {
           ))}
 
           {/* Order Summary في أسفل الصفحة بعد كل المنتجات */}
-          <div className="card mt-4">
+          <div className="card mt-4 mb-5">
             <div className="card-header">
               <h3 className="fw-bold">Order Summary</h3>
             </div>

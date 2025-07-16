@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -7,7 +7,7 @@ import "./index.css";
 
 import { jwtDecode } from "jwt-decode";
 import Layout from "./Layout/Layout";
-import About from "./About/About";
+
 import Home from "./Home/Home";
 import Rigester from "./Rigester/Rigester";
 import Login from "./Login/Login";
@@ -17,7 +17,7 @@ import CategoryDetails from "./CategoryDetails/CategoryDetails";
 import CategoryProvider from "./CategoryContext/CategoryContext";
 import Profile from "./Profile/Profile";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
-import CardContextProvider, { CardContext } from "./CardContext/CardContext";
+import CardContextProvider from "./CardContext/CardContext";
 import ShoppingCardProvider from "./ShoppingContext/ShoppingCardContext";
 import CartsDetails from "./CartsDetails/CartsDetails";
 import CheckOut from "./CheckOut/Checkout";
@@ -38,22 +38,14 @@ function App() {
   }, []);
 
   // routers:
-  let routers = createBrowserRouter([
+  let routers = createHashRouter([
     {
       path: "/",
       element: <Layout setUserData={setUserdata} userData={userData} />,
       children: [
         { index: true, element: <Rigester /> },
         { path: "login", element: <Login saveUserData={saveUserData} /> },
-        {
-          path: "about",
-          element: (
-            <ProtectedRoute userData={userData}>
-              {" "}
-              <About />
-            </ProtectedRoute>
-          ),
-        },
+
         {
           path: "home",
           element: (
@@ -73,7 +65,6 @@ function App() {
             </ProtectedRoute>
           ),
         },
-       
 
         {
           path: "checkout",
